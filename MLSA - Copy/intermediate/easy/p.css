@@ -1,0 +1,159 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f0f0f0; /* Slightly darker for contrast */ 
+    color: #333; 
+} 
+ 
+#navbar { 
+    background-color: #ff4d4d; /* Red */ 
+    padding: 15px; 
+    text-align: center; 
+} 
+ 
+#navbar ul { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+} 
+ 
+#navbar li { 
+    display: inline; 
+    margin: 0 20px; 
+    color: white; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: transform 0.3s, color 0.3s; /* Added color transition */ 
+} 
+ 
+#navbar li:hover { 
+    transform: scale(1.1); /* Hover effect */ 
+    color: #ffcc00; /* Change color on hover */ 
+} 
+ 
+#details { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+    background-color: #ffefba; /* Light yellow */ 
+} 
+ 
+#details-image img { 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+} 
+ 
+#details-content { 
+    margin-left: 20px; 
+    color: black; /* Black text for better readability */ 
+} 
+ 
+h1 { 
+    text-align: center; 
+    color: #ffcc00; /* Yellow */ 
+    font-size: 2.5em; 
+    margin: 20px 0; 
+    position: relative; 
+    animation: colorChange 5s infinite; /* Animation */ 
+} 
+ 
+@keyframes colorChange { 
+    0% { color: #ff4d4d; } /* Red */ 
+    25% { color: #ffcc00; } /* Yellow */ 
+    50% { color: #4caf50; } /* Green */ 
+    75% { color: #2196F3; } /* Blue */ 
+    100% { color: #ff4d4d; } /* Red */ 
+} 
+ 
+h1::after { 
+    content: ""; 
+    position: absolute; 
+    width: 100%; 
+    height: 5px; 
+    background: linear-gradient(to right, #ff4d4d, #4caf50, #ffcc00); /* Gradient effect */ 
+    bottom: -10px; 
+    left: 0; 
+    animation: underline-animation 1s ease-in-out infinite; /* Animation */ 
+} 
+ 
+@keyframes underline-animation { 
+    0%, 100% { 
+        transform: scaleX(1); 
+    } 
+    50% { 
+        transform: scaleX(1.1); 
+    } 
+} 
+ 
+section { 
+    padding: 20px; 
+    margin: 10px; 
+    border-radius: 8px; 
+    background: white; /* White background for sections */ 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+} 
+ 
+.project { 
+    margin: 20px 0; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    background: #ffcc00; /* Yellow for project boxes */ 
+    transition: transform 0.3s; /* Smooth scale transition */ 
+} 
+ 
+.project:hover { 
+    transform: scale(1.02); /* Slight grow effect */ 
+} 
+ 
+button { 
+    background-color: #ff4d4d; /* Red */ 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */ 
+} 
+ 
+button:hover { 
+    background-color: #ff2e2e; /* Darker red on hover */ 
+    transform: scale(1.05); /* Slight grow effect */ 
+} 
+ 
+form { 
+    display: flex; 
+    flex-direction: column; 
+} 
+ 
+input, textarea { 
+    margin: 5px 0; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+} 
+ 
+input:focus, textarea:focus { 
+    border-color: #ff4d4d; /* Red focus border */ 
+    outline: none; 
+} 
+ 
+footer { 
+    text-align: center; 
+    padding: 20px; 
+    background: #333; /* Black footer */ 
+    color: white; 
+} 
+ 
+/* Responsive Design */ 
+@media (max-width: 768px) { 
+    #details { 
+        flex-direction: column; /* Stack elements on smaller screens */ 
+        text-align: center; 
+    } 
+    #details-content { 
+        margin-left: 0; /* Remove left margin for smaller screens */ 
+    } 
+} 
